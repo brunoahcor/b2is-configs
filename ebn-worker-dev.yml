@@ -1,0 +1,24 @@
+spring: 
+  datasource: 
+    password: 123456
+    url: "jdbc:postgresql://localhost:5432/db_ebn_worker"
+    username: postgres
+  flyway: 
+    baseline-on-migrate: true
+    enabled: true
+  jpa: 
+    properties: 
+      javax: 
+        hibernate: 
+          ddl-auto: none
+          hbm2ddl: 
+            delimiter: ;
+          jdbc: 
+            lob: 
+              non_contextual_creation: true
+        persistence: 
+          schema-generation: 
+            create-source: metadata
+          scripts: 
+            action: create
+            create-target: ebn-worker/src/main/resources/db/schema-generation/create_table_tb_worker.sql
