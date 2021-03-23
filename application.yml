@@ -1,0 +1,7 @@
+oauth:
+  client:
+    id: my_app_name
+    secret: my_app_secret
+    token.expire: 86400
+
+jwt.secret: MY-JWT-SECRET
